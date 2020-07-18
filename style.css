@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 16px;
+}
+
+main {
+  text-align: center;
+  margin: 4rem auto 1rem auto;
+  max-width: 650px;
+}
+
+main h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #969696;
+  margin-bottom: 0.5rem;
+}
+
+main h1 strong {
+  color: #151f29;
+}
+
+main h2 {
+  font-weight: 300;
+}
+
+main form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+main form inpt-par {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main form input {
+  border: 1px solid #c2d3ff;
+  border-radius: 2rem;
+  outline: none;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 0.9rem;
+  padding: 0.8rem 1.7rem;
+  width: 425px;
+  max-width: 100%;
+  -webkit-transition: 0.2s ease-in all;
+  transition: 0.2s ease-in all;
+}
+
+main form input::-webkit-input-placeholder {
+  color: #969696;
+}
+
+main form input:-ms-input-placeholder {
+  color: #969696;
+}
+
+main form input::-ms-input-placeholder {
+  color: #969696;
+}
+
+main form input::placeholder {
+  color: #969696;
+}
+
+main form input:focus {
+  -webkit-box-shadow: 2px 5px 5px rgba(194, 211, 255, 0.4);
+          box-shadow: 2px 5px 5px rgba(194, 211, 255, 0.4);
+}
+
+main form button {
+  background: #4f7df3;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  padding: 0.8rem 3rem;
+  margin-left: 1rem;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 5px 5px rgba(194, 211, 255, 0.4);
+          box-shadow: 0px 5px 5px rgba(194, 211, 255, 0.4);
+  -webkit-transition: 0.2s ease-in all;
+  transition: 0.2s ease-in all;
+}
+
+main form button:hover {
+  -webkit-box-shadow: 0px 10px 10px rgba(194, 211, 255, 0.4);
+          box-shadow: 0px 10px 10px rgba(194, 211, 255, 0.4);
+  background: #668ff4;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+main form .error {
+  color: #ff5263;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 2rem;
+}
+
+main .img {
+  max-width: 100%;
+  margin: 4rem 0;
+}
+
+main .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+main .social li {
+  margin: 1rem;
+}
+
+main .social li a {
+  text-decoration: none;
+  color: #4f7df3;
+  border-radius: 50%;
+  border: 1px solid #c2d3ff;
+  font-size: 1.2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  -webkit-transition: 0.2s ease-in all;
+  transition: 0.2s ease-in all;
+}
+
+main .social li a:hover {
+  background: #4f7df3;
+  color: white;
+  border-color: #4f7df3;
+}
+
+main footer p {
+  color: gray;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+// colors
+$blue: hsl(223, 87%, 63%);
+$pale-blue: hsl(223, 100%, 88%);
+$light-red: hsl(354, 100%, 66%);
+$gray: hsl(0, 0%, 59%);
+$dark-blue: hsl(209, 33%, 12%);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 16px;
+}
+
+main {
+  text-align: center;
+  margin: 4rem auto 1rem auto;
+  max-width: 650px;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    color: $gray;
+    margin-bottom: 0.5rem;
+    strong {
+      color: $dark-blue;
+    }
+  }
+
+  h2 {
+    font-weight: 300;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: left;
+
+    inpt-par {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input {
+      border: 1px solid $pale-blue;
+      border-radius: 2rem;
+      outline: none;
+      font-family: "Libre Franklin", sans-serif;
+      font-size: 0.9rem;
+      padding: 0.8rem 1.7rem;
+      width: 425px;
+      max-width: 100%;
+      transition: 0.2s ease-in all;
+
+      &::placeholder {
+        color: $gray;
+      }
+
+      &:focus {
+        box-shadow: 2px 5px 5px rgba($pale-blue, 0.4);
+      }
+    }
+
+    button {
+      background: $blue;
+      border: none;
+      outline: none;
+      border-radius: 2rem;
+      font-family: "Libre Franklin", sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+      padding: 0.8rem 3rem;
+      margin-left: 1rem;
+      margin-bottom: 0.4rem;
+      cursor: pointer;
+      box-shadow: 0px 5px 5px rgba($pale-blue, 0.4);
+      transition: 0.2s ease-in all;
+
+      &:hover {
+        box-shadow: 0px 10px 10px rgba($pale-blue, 0.4);
+        background: lighten($blue, 5%);
+        transform: translateY(-1px);
+      }
+    }
+
+    .error {
+      color: $light-red;
+      font-style: italic;
+      font-size: 0.9rem;
+      margin: 2rem;
+    }
+  }
+
+  .img {
+    max-width: 100%;
+    margin: 4rem 0;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      margin: 1rem;
+
+      a {
+        text-decoration: none;
+        color: $blue;
+        border-radius: 50%;
+        border: 1px solid $pale-blue;
+        font-size: 1.2rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.2rem;
+        height: 2.2rem;
+        transition: 0.2s ease-in all;
+
+        &:hover {
+          background: $blue;
+          color: white;
+          border-color: $blue;
+        }
+      }
+    }
+  }
+
+  footer p {
+    color: gray;
+  }
+}
