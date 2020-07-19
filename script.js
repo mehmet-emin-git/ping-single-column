@@ -20,7 +20,6 @@ form.addEventListener("submit", (e) => {
   } else {
     // submit
     email.classList.remove("error");
-    small.innerText = "";
     small.style.display = "inline-block";
     small.style.color = "green";
     small.innerText = "Thank you for submiting.";

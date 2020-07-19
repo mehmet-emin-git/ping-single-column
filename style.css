@@ -11,10 +11,10 @@ body {
 
 main {
   text-align: center;
-  margin: 4rem auto 1rem auto;
+  margin: 2rem auto 1rem auto;
   max-width: 650px;
   width: 85%;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 0 1.5rem;
 }
 
 main h1 {
@@ -126,10 +126,10 @@ main form button {
   color: white;
   padding: 0.8rem 3rem;
   cursor: pointer;
-  -webkit-box-shadow: 0px 5px 5px rgba(194, 211, 255, 0.4);
-          box-shadow: 0px 5px 5px rgba(194, 211, 255, 0.4);
-  -webkit-transition: 0.1s ease-in all;
-  transition: 0.1s ease-in all;
+  -webkit-box-shadow: 0px 8px 7px rgba(194, 211, 255, 0.6);
+          box-shadow: 0px 8px 7px rgba(194, 211, 255, 0.6);
+  -webkit-transition: 0.1s cubic-bezier(0.74, 1.21, 1, 1) all;
+  transition: 0.1s cubic-bezier(0.74, 1.21, 1, 1) all;
   -webkit-box-flex: 0.2;
       -ms-flex: 0.2;
           flex: 0.2;
@@ -162,7 +162,7 @@ main form.error {
 
 main .img {
   max-width: 100%;
-  margin: 4rem 0;
+  margin: 4rem 0 1rem 0;
 }
 
 main .social {
