@@ -20,6 +20,8 @@ main {
   text-align: center;
   margin: 4rem auto 1rem auto;
   max-width: 650px;
+  width: 85%;
+  padding: 1.5rem;
 
   h1 {
     font-size: 3rem;
@@ -38,34 +40,42 @@ main {
   form {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 2rem;
     text-align: left;
+    gap: 1rem;
 
-    inpt-par {
+    .inpt-par {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      align-items: space-between;
+      gap: 0.5rem;
+      flex: 0.8;
     }
 
     input {
-      border: 1px solid $pale-blue;
+      border: 1px solid lighten($pale-blue, 5%);
       border-radius: 2rem;
       outline: none;
       font-family: "Libre Franklin", sans-serif;
       font-size: 0.9rem;
       padding: 0.8rem 1.7rem;
-      width: 425px;
+      width: 100%;
       max-width: 100%;
       transition: 0.2s ease-in all;
 
       &::placeholder {
         color: $gray;
       }
+      &.error::placeholder {
+        color: $light-red;
+      }
 
       &:focus {
         box-shadow: 2px 5px 5px rgba($pale-blue, 0.4);
+      }
+
+      &.error {
+        border-color: $light-red;
       }
     }
 
@@ -79,24 +89,32 @@ main {
       font-weight: 600;
       color: white;
       padding: 0.8rem 3rem;
-      margin-left: 1rem;
-      margin-bottom: 0.4rem;
       cursor: pointer;
       box-shadow: 0px 5px 5px rgba($pale-blue, 0.4);
-      transition: 0.2s ease-in all;
+      transition: 0.1s ease-in all;
+      flex: 0.2;
+      align-self: flex-start;
 
       &:hover {
-        box-shadow: 0px 10px 10px rgba($pale-blue, 0.4);
         background: lighten($blue, 5%);
-        transform: translateY(-1px);
+      }
+
+      &:active {
+        box-shadow: 0px 5px 5px rgba($pale-blue, 0.5);
+        transform: translateY(2px);
       }
     }
 
-    .error {
+    .error-msg {
       color: $light-red;
       font-style: italic;
-      font-size: 0.9rem;
-      margin: 2rem;
+      font-size: 0.8rem;
+      padding-left: 2rem;
+      display: none;
+    }
+
+    &.error {
+      display: inline-block;
     }
   }
 
@@ -139,5 +157,33 @@ main {
 
   footer p {
     color: gray;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    margin: 2rem auto 0.5rem auto;
+  }
+  form {
+    flex-direction: column;
+    text-align: center;
+
+    .inpt-par {
+      width: 100%;
+      gap: 1rem;
+
+      input {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .error-msg {
+      text-align: center;
+    }
+
+    button {
+      margin-left: 0;
+      width: 100%;
+    }
   }
 }

@@ -13,6 +13,8 @@ main {
   text-align: center;
   margin: 4rem auto 1rem auto;
   max-width: 650px;
+  width: 85%;
+  padding: 1.5rem;
 }
 
 main h1 {
@@ -37,14 +39,12 @@ main form {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-top: 2rem;
   text-align: left;
+  gap: 1rem;
 }
 
-main form inpt-par {
+main form .inpt-par {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,22 +52,23 @@ main form inpt-par {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  gap: 0.5rem;
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
 }
 
 main form input {
-  border: 1px solid #c2d3ff;
+  border: 1px solid #dbe5ff;
   border-radius: 2rem;
   outline: none;
   font-family: "Libre Franklin", sans-serif;
   font-size: 0.9rem;
   padding: 0.8rem 1.7rem;
-  width: 425px;
+  width: 100%;
   max-width: 100%;
   -webkit-transition: 0.2s ease-in all;
   transition: 0.2s ease-in all;
@@ -89,9 +90,29 @@ main form input::placeholder {
   color: #969696;
 }
 
+main form input.error::-webkit-input-placeholder {
+  color: #ff5263;
+}
+
+main form input.error:-ms-input-placeholder {
+  color: #ff5263;
+}
+
+main form input.error::-ms-input-placeholder {
+  color: #ff5263;
+}
+
+main form input.error::placeholder {
+  color: #ff5263;
+}
+
 main form input:focus {
   -webkit-box-shadow: 2px 5px 5px rgba(194, 211, 255, 0.4);
           box-shadow: 2px 5px 5px rgba(194, 211, 255, 0.4);
+}
+
+main form input.error {
+  border-color: #ff5263;
 }
 
 main form button {
@@ -104,28 +125,39 @@ main form button {
   font-weight: 600;
   color: white;
   padding: 0.8rem 3rem;
-  margin-left: 1rem;
-  margin-bottom: 0.4rem;
   cursor: pointer;
   -webkit-box-shadow: 0px 5px 5px rgba(194, 211, 255, 0.4);
           box-shadow: 0px 5px 5px rgba(194, 211, 255, 0.4);
-  -webkit-transition: 0.2s ease-in all;
-  transition: 0.2s ease-in all;
+  -webkit-transition: 0.1s ease-in all;
+  transition: 0.1s ease-in all;
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 main form button:hover {
-  -webkit-box-shadow: 0px 10px 10px rgba(194, 211, 255, 0.4);
-          box-shadow: 0px 10px 10px rgba(194, 211, 255, 0.4);
   background: #668ff4;
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
 }
 
-main form .error {
+main form button:active {
+  -webkit-box-shadow: 0px 5px 5px rgba(194, 211, 255, 0.5);
+          box-shadow: 0px 5px 5px rgba(194, 211, 255, 0.5);
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+main form .error-msg {
   color: #ff5263;
   font-style: italic;
-  font-size: 0.9rem;
-  margin: 2rem;
+  font-size: 0.8rem;
+  padding-left: 2rem;
+  display: none;
+}
+
+main form.error {
+  display: inline-block;
 }
 
 main .img {
@@ -180,5 +212,32 @@ main .social li a:hover {
 
 main footer p {
   color: gray;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    margin: 2rem auto 0.5rem auto;
+  }
+  form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  form .inpt-par {
+    width: 100%;
+    gap: 1rem;
+  }
+  form .inpt-par input {
+    margin-bottom: 1rem;
+  }
+  form .error-msg {
+    text-align: center;
+  }
+  form button {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,15 +1,33 @@
-const form = document.getElementById("fomr");
+const form = document.getElementById("form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   // check for valid email
+  const email = form["email"];
   const emailValue = form["email"].value;
+  const small = form.querySelector("small");
 
-  if (!emailValue || !isValidEmail) {
+  if (!emailValue) {
     // say its empty
+    email.classList.add("error");
+    small.innerText = "Email field cannot be empty!";
+    small.style.display = "inline-block";
+  } else if (!isValidEmail) {
+    email.classList.add("error");
+    small.innerText = "Email address is Invalid!";
+    small.style.display = "inline-block";
   } else {
     // submit
+    email.classList.remove("error");
+    small.innerText = "";
+    small.style.display = "inline-block";
+    small.style.color = "green";
+    small.innerText = "Thank you for submiting.";
+
+    setTimeout(() => {
+      small.innerText = "";
+    }, 3000);
   }
 });
 
