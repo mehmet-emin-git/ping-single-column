@@ -8,13 +8,16 @@ body {
   font-family: "Libre Franklin", sans-serif;
   font-size: 16px;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 main {
   text-align: center;
-  margin: 2rem auto 1rem auto;
+  margin: 2rem auto 0 auto;
   max-width: 650px;
   width: 85%;
+  height: 100vh;
   padding: 1.5rem 1.5rem 0 1.5rem;
 }
 
@@ -163,7 +166,7 @@ main form.error {
 
 main .img {
   max-width: 100%;
-  margin: 4rem 0 1rem 0;
+  margin: 4rem 0 2rem 0;
 }
 
 main .social {
@@ -199,8 +202,8 @@ main .social li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2rem;
+  height: 2rem;
   -webkit-transition: 0.2s ease-in all;
   transition: 0.2s ease-in all;
 }
@@ -209,6 +212,10 @@ main .social li a:hover {
   background: #4f7df3;
   color: white;
   border-color: #4f7df3;
+}
+
+main footer {
+  margin-bottom: 0;
 }
 
 main footer p {
