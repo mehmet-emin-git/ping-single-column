@@ -239,28 +239,112 @@ main footer p {
 
 @media screen and (max-width: 600px) {
   main {
-    margin: 2rem auto 0.5rem auto;
+    margin: 4rem auto 0.5rem auto;
   }
-  form {
+  main form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
   }
-  form .inpt-par {
+  main form .inpt-par {
     width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
-  form .inpt-par input {
-    margin-bottom: 2rem;
+  main form .inpt-par input {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
   }
-  form .error-msg {
+  main form .inpt-par input::-webkit-input-placeholder {
+    font-size: 0.8rem;
+  }
+  main form .inpt-par input:-ms-input-placeholder {
+    font-size: 0.8rem;
+  }
+  main form .inpt-par input::-ms-input-placeholder {
+    font-size: 0.8rem;
+  }
+  main form .inpt-par input::placeholder {
+    font-size: 0.8rem;
+  }
+  main form .error-msg {
     text-align: center;
-    margin-top: 1rem;
+    margin: 0.3rem 0 1rem 0;
+    padding-left: 0;
   }
-  form button {
+  main form button {
     width: 100%;
     margin-left: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  main .img {
+    max-width: 100%;
+    margin: 7rem 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 15px;
+  }
+  main {
+    margin: 2rem auto 0.5rem auto;
+  }
+  main .logo {
+    width: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+  main h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  main h2 {
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  main form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  main form .inpt-par {
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  main form .inpt-par input {
+    font-size: 0.8rem;
+  }
+  main form .inpt-par input::-webkit-input-placeholder {
+    font-size: 0.8rem;
+  }
+  main form .inpt-par input:-ms-input-placeholder {
+    font-size: 0.8rem;
+  }
+  main form .inpt-par input::-ms-input-placeholder {
+    font-size: 0.8rem;
+  }
+  main form .inpt-par input::placeholder {
+    font-size: 0.8rem;
+  }
+  main form .error-msg {
+    padding-left: 0;
+    margin: 0.3rem 0 0.5rem 0;
+  }
+  main form button {
+    font-size: 0.75rem;
+  }
+  main .img {
+    max-width: 100%;
+    margin: 3.5rem 0 5rem 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
