@@ -17,7 +17,7 @@ main {
   margin: 0 auto;
   max-width: 650px;
   width: 85%;
-  height: 100vh;
+  min-height: 100vh;
   padding: 4rem 1.5rem 0 1.5rem;
 }
 
@@ -228,10 +228,6 @@ main .social li a:hover {
   border-color: #4f7df3;
 }
 
-main footer {
-  margin-bottom: 1rem;
-}
-
 main footer p {
   color: gray;
   font-size: 0.8rem;
@@ -239,7 +235,8 @@ main footer p {
 
 @media screen and (max-width: 600px) {
   main {
-    margin: 4rem auto 0.5rem auto;
+    min-height: 100vh;
+    margin: 4rem auto 0 auto;
   }
   main form {
     -webkit-box-orient: vertical;
@@ -291,9 +288,12 @@ main footer p {
 @media screen and (max-width: 375px) {
   body {
     font-size: 15px;
+    margin: 0;
+    padding: 0;
   }
   main {
-    margin: 2rem auto 0.5rem auto;
+    min-height: 100vh;
+    margin: 0 auto;
   }
   main .logo {
     width: 3.5rem;
