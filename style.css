@@ -14,11 +14,11 @@ body {
 
 main {
   text-align: center;
-  margin: 2rem auto 0 auto;
+  margin: 0 auto;
   max-width: 650px;
   width: 85%;
   height: 100vh;
-  padding: 1.5rem 1.5rem 0 1.5rem;
+  padding: 4rem 1.5rem 0 1.5rem;
 }
 
 main h1 {
@@ -43,9 +43,9 @@ main form {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 1rem;
   margin-top: 2rem;
   text-align: left;
-  gap: 1rem;
 }
 
 main form .inpt-par {
@@ -59,7 +59,6 @@ main form .inpt-par {
   -webkit-box-align: space-between;
       -ms-flex-align: space-between;
           align-items: space-between;
-  gap: 0.5rem;
   -webkit-box-flex: 0.8;
       -ms-flex: 0.8;
           flex: 0.8;
@@ -129,6 +128,7 @@ main form button {
   font-weight: 600;
   color: white;
   padding: 0.8rem 3rem;
+  margin-left: 1rem;
   cursor: pointer;
   -webkit-box-shadow: 0px 8px 7px rgba(194, 211, 255, 0.6);
           box-shadow: 0px 8px 7px rgba(194, 211, 255, 0.6);
@@ -157,7 +157,8 @@ main form .error-msg {
   font-style: italic;
   font-size: 0.8rem;
   padding-left: 2rem;
-  display: none;
+  margin-top: 0.8rem;
+  visibility: hidden;
 }
 
 main form.error {
@@ -184,7 +185,7 @@ main .social {
 }
 
 main .social li {
-  margin: 1rem;
+  margin: 1rem 1rem 0.5rem 0;
 }
 
 main .social li a {
@@ -202,10 +203,23 @@ main .social li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: 1.7rem;
+  height: 1.7rem;
   -webkit-transition: 0.2s ease-in all;
   transition: 0.2s ease-in all;
+}
+
+main .social li a .fab {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8rem;
 }
 
 main .social li a:hover {
@@ -215,11 +229,12 @@ main .social li a:hover {
 }
 
 main footer {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 main footer p {
   color: gray;
+  font-size: 0.8rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -235,17 +250,17 @@ main footer p {
   }
   form .inpt-par {
     width: 100%;
-    gap: 1rem;
   }
   form .inpt-par input {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   form .error-msg {
     text-align: center;
+    margin-top: 1rem;
   }
   form button {
-    margin-left: 0;
     width: 100%;
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

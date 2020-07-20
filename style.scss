@@ -21,11 +21,11 @@ body {
 
 main {
   text-align: center;
-  margin: 2rem auto 0 auto;
+  margin: 0 auto;
   max-width: 650px;
   width: 85%;
   height: 100vh;
-  padding: 1.5rem 1.5rem 0 1.5rem;
+  padding: 4rem 1.5rem 0 1.5rem;
 
   h1 {
     font-size: 3rem;
@@ -44,15 +44,14 @@ main {
   form {
     display: flex;
     justify-content: center;
+    gap: 1rem;
     margin-top: 2rem;
     text-align: left;
-    gap: 1rem;
 
     .inpt-par {
       display: flex;
       flex-direction: column;
       align-items: space-between;
-      gap: 0.5rem;
       flex: 0.8;
     }
 
@@ -93,6 +92,7 @@ main {
       font-weight: 600;
       color: white;
       padding: 0.8rem 3rem;
+      margin-left: 1rem;
       cursor: pointer;
       box-shadow: 0px 8px 7px rgba(194, 211, 255, 0.6);
       transition: 0.1s cubic-bezier(0.74, 1.21, 1, 1) all;
@@ -114,7 +114,8 @@ main {
       font-style: italic;
       font-size: 0.8rem;
       padding-left: 2rem;
-      display: none;
+      margin-top: 0.8rem;
+      visibility: hidden;
     }
 
     &.error {
@@ -135,7 +136,7 @@ main {
     list-style-type: none;
 
     li {
-      margin: 1rem;
+      margin: 1rem 1rem 0.5rem 0;
 
       a {
         text-decoration: none;
@@ -146,10 +147,16 @@ main {
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        width: 2rem;
-        height: 2rem;
+        width: 1.7rem;
+        height: 1.7rem;
         transition: 0.2s ease-in all;
 
+        .fab {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.8rem;
+        }
         &:hover {
           background: $blue;
           color: white;
@@ -160,9 +167,10 @@ main {
   }
 
   footer {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     p {
       color: gray;
+      font-size: 0.8rem;
     }
   }
 }
@@ -171,26 +179,25 @@ main {
   main {
     margin: 2rem auto 0.5rem auto;
   }
+
   form {
     flex-direction: column;
     text-align: center;
-
     .inpt-par {
       width: 100%;
-      gap: 1rem;
 
       input {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
       }
     }
 
     .error-msg {
       text-align: center;
+      margin-top: 1rem;
     }
-
     button {
-      margin-left: 0;
       width: 100%;
+      margin-left: 0;
     }
   }
 }

@@ -12,20 +12,21 @@ form.addEventListener("submit", (e) => {
     // say its empty
     email.classList.add("error");
     small.innerText = "Email field cannot be empty!";
-    small.style.display = "inline-block";
+    small.style.visibility = "visible";
   } else if (!isValidEmail) {
     email.classList.add("error");
     small.innerText = "Email address is Invalid!";
-    small.style.display = "inline-block";
+    small.style.visibility = "visible";
   } else {
     // submit
     email.classList.remove("error");
-    small.style.display = "inline-block";
+    small.style.visibility = "visible";
     small.style.color = "green";
     small.innerText = "Thank you for submiting.";
 
     setTimeout(() => {
       small.innerText = "";
+      small.style.visibility = "hidden";
     }, 3000);
   }
 });
