@@ -180,12 +180,12 @@ main .social {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0;
   list-style-type: none;
+  padding-left: 0;
 }
 
 main .social li {
-  margin: 1rem 1rem 0.5rem 0;
+  margin: 0.5rem 0.5rem;
 }
 
 main .social li a {
@@ -344,7 +344,10 @@ main footer p {
   }
   main .img {
     max-width: 100%;
-    margin: 3.5rem 0 5rem 0;
+    margin: 5rem 0 5rem 0;
+  }
+  main footer .social {
+    margin-top: 2.5 rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
